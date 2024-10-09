@@ -1,17 +1,17 @@
 import express from 'express';
-import { VercelRequest, VercelResponse } from '@vercel/node';
+import dotenv from 'dotenv';
 import categoryRoutes from './routes/categoryRoutes';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 
-// Inisialisasi aplikasi Express
+dotenv.config();
+
 const app = express();
-
-// Middleware untuk parsing JSON
 app.use(express.json());
 
-// Tambahkan routing untuk kategori
+// Definisikan rute
 app.use('/api/category', categoryRoutes);
 
-// Handler untuk Vercel (menggunakan vercel proxy request ke Express)
+// Ekspor handler untuk digunakan Vercel
 export default (req: VercelRequest, res: VercelResponse) => {
   return app(req, res);
 };
