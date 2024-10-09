@@ -40,7 +40,7 @@ Before setting up the project, ensure that you have the following installed:
 
     ```bash
     git clone https://github.com/FigoArbiansyah/api-ecommmerce.git
-    cd my-api-project
+    cd api-ecommmerce
     ```
 
 2. **Install dependencies:**
