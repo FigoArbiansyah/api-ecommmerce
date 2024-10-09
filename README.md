@@ -39,8 +39,8 @@ Before setting up the project, ensure that you have the following installed:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/my-api-project.git
-    cd my-api-project
+    git clone https://github.com/FigoArbiansyah/api-ecommmerce.git
+    cd api-ecommmerce
     ```
 
 2. **Install dependencies:**
