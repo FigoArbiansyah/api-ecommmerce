@@ -1,9 +1,10 @@
 import { Request, Response } from 'express';
-import Category from '../models/Category';
+import db from '../config/db'; // Import koneksi database
 
+// Fungsi untuk mendapatkan semua kategori
 export const getAllCategories = async (req: Request, res: Response) => {
   try {
-    const categories = await Category.findAll();
+    const [categories] = await db.query('SELECT * FROM categories');
     console.log('categories', categories);
     res.json(categories);
   } catch (error) {
