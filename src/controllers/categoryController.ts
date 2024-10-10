@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
-import db from '../config/db'; // Import koneksi database
+import Category from '../models/Category';
 
 // Fungsi untuk mendapatkan semua kategori
 export const getAllCategories = async (req: Request, res: Response) => {
   try {
-    const [categories] = await db.query('SELECT * FROM category');
+    const categories = await Category.findAll(); // Menggunakan metode Sequelize
     console.log('categories', categories);
     res.json(categories);
   } catch (error) {
