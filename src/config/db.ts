@@ -13,4 +13,8 @@ const db = new Sequelize(
   },
 );
 
+(() => {
+  db.sync({ alter: true });
+});
+
 export default db;
